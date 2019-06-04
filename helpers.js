@@ -9,7 +9,12 @@ const toNDecimals = memoizeWith(toString, (decimals, number) => {
   return Math.round(number * precisor) / precisor
 })
 
+const getBaseLog = memoizeWith(toString, (base, number) => {
+  return Math.log(number) / Math.log(base);
+})
+
 export {
   nthRoot,
-  toNDecimals
+  toNDecimals,
+  getBaseLog
 }
