@@ -1,0 +1,20 @@
+{
+  "name": "absolute-cent",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xenharmonic-devs/absolute-cent.git"
+  },
+  "author": "Lajos Meszaros <m_lajos@hotmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/xenharmonic-devs/absolute-cent/issues"
+  },
+  "homepage": "https://github.com/xenharmonic-devs/absolute-cent#readme",
+  "dependencies": {
+    "ramda": "^0.26.1"
+  }
+}
