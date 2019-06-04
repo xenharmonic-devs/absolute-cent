@@ -2,9 +2,11 @@
 
 ## notes
 
-scientific notation: A4, C0, B2#
+scientific notation: A4, C0, B#2
 
-notes in scientific notation span from C0 and there are 128 semitones, which matches the MIDI specification
+notes in scientific notation span from C0
+
+MIDI notes start from **C-1** and there are a total of 128 semitones, where A4 is #69
 
 frequency for scientific notation is derived from an anchor point: A4 = 440, A4 = 432
 
@@ -12,18 +14,18 @@ frequency for scientific notation is derived from an anchor point: A4 = 440, A4 
 
 1 octave = 1200 semitone
 
-n Hz + 1 semitone = n * (12th root 2) Hz
-
 n Hz + m semitone = n * (12th root 2) ^ m Hz
 
 n Hz - m semitone = n / (12th root 2) ^ m Hz
 
-A4 = 4 * octave + 9 semitone
+A4 = 5 * octave + 9 semitone
 
-C0 = 0 * octave + 0 semitone
+C0 = 1 * octave + 0 semitone
 
-4 octave + 9 semitone = 4 * 12 semitone + 9 semitone = 57 semitone
+C-1 = 0 * octave + 0 semitone
 
-C0 = A4 - 57 semitone = 440 / (12th root 2) ^ 57 Hz = 16.35159… Hz
+5 octave + 9 semitone = 5 * 12 semitone + 9 semitone = 69 semitone
 
-0 absolute cent = C0 = 16.35159 Hz, if A4 = 440 Hz
+C-1 = A4 - 69 semitone = 440 / (12th root 2) ^ 69 Hz = 8.1758… Hz
+
+0 absolute cent = C-1 = 8.1758  Hz, if A4 = 440 Hz
