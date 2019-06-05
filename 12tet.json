@@ -1,7 +1,8 @@
 {
   "title": "12 Tone Equal Temperament",
-  "startAt": "C4",
+  "anchor": [9, "A4"],
   "pitches": [
+    0,
     100,
     200,
     300,
