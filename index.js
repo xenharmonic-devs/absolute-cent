@@ -1,9 +1,6 @@
 import { memoizeWith, toString } from 'ramda'
-import { nthRoot, toNDecimals, getBaseLog, scientificNotationToSemitones } from './helpers'
-
-const semitoneRatio = nthRoot(12, 2)
-const centRatio = nthRoot(1200, 2)
-const noteIndexOfA4 = 69
+import { toNDecimals, getBaseLog, scientificNotationToSemitones } from './helpers'
+import { semitoneRatio, centRatio, noteIndexOfA4 } from './constants'
 
 // calculateFrequencyOfZeroCents :: int -> float
 const calculateFrequencyOfZeroCents = memoizeWith(toString, frequencyOfA4 => {
