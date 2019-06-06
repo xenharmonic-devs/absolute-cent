@@ -15,6 +15,7 @@ const fromHertz = (frequency, frequencyOfA4 = 440, precision = 7) => {
 }
 
 const fromSemitones = (semitones, frequencyOfA4 = 440, precision = 7) => {
+  // TODO: changing the frequencyOfA4 seems to do nothing, can it be removed?
   const hertz = calculateFrequencyOfZeroCents(frequencyOfA4) * semitoneRatio ** semitones
   return fromHertz(hertz, frequencyOfA4, precision)
 }
