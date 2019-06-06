@@ -12,3 +12,7 @@ describe('nthRoot', () => {
     assert.equal(Math.round(nthRoot(3, 64)), 4)
   })
 })
+
+describe('toNDecimals', () => {})
+
+describe('getBaseLog', () => {})

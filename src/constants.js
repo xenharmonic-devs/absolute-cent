@@ -22,10 +22,4 @@ const semitonesByModifier = {
   bb: -2
 }
 
-export {
-  semitoneRatio,
-  centRatio,
-  noteIndexOfA4,
-  semitonesByKey,
-  semitonesByModifier
-}
+export { semitoneRatio, centRatio, noteIndexOfA4, semitonesByKey, semitonesByModifier }

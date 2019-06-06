@@ -1,10 +1,10 @@
-import { memoizeWith, toString, match, tail, toLower } from 'ramda'
-import { semitonesByModifier, semitonesByKey, noteIndexOfA4 } from './constants'
+import { memoizeWith, toString, match, tail, toLower, is, test } from 'ramda'
+import { semitonesByModifier, semitonesByKey, noteIndexOfA4, semitoneRatio } from './constants'
 
 const scientificNotationToSemitones = memoizeWith(toString, note => {
   const pattern = /^([a-g])(x|#|bb|b|)(-1|\d)$/i
 
-  if (!is(Sring, note) || !test(pattern, note)) {
+  if (!is(String, note) || !test(pattern, note)) {
     return null
   }
 
@@ -18,7 +18,4 @@ const calculateFrequencyOfZeroCents = memoizeWith(toString, frequencyOfA4 => {
   return frequencyOfA4 / semitoneRatio ** noteIndexOfA4
 })
 
-export {
-  scientificNotationToSemitones,
-  calculateFrequencyOfZeroCents
-}
+export { scientificNotationToSemitones, calculateFrequencyOfZeroCents }

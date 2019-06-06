@@ -5,3 +5,7 @@ import {
   scientificNotationToSemitones,
   calculateFrequencyOfZeroCents
 } from '../src/helpers'
+
+describe('scientificNotationToSemitones', () => {})
+
+describe('calculateFrequencyOfZeroCents', () => {})

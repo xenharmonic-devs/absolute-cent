@@ -25,9 +25,4 @@ const fromScientificNotation = memoizeWith(toString, (note, frequencyOfA4 = 440,
   return fromSemitones(scientificNotationToSemitones(note), frequencyOfA4, precision)
 })
 
-export {
-  toHertz,
-  fromHertz,
-  fromSemitones,
-  fromScientificNotation
-}
+export { toHertz, fromHertz, fromSemitones, fromScientificNotation }

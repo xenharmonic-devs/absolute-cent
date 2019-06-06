@@ -10,11 +10,7 @@ const toNDecimals = memoizeWith(toString, (decimals, number) => {
 })
 
 const getBaseLog = memoizeWith(toString, (base, number) => {
-  return Math.log(number) / Math.log(base);
+  return Math.log(number) / Math.log(base)
 })
 
-export {
-  nthRoot,
-  toNDecimals,
-  getBaseLog
-}
+export { nthRoot, toNDecimals, getBaseLog }

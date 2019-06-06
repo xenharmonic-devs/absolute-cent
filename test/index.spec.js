@@ -7,3 +7,11 @@ import {
   fromSemitones,
   fromScientificNotation
 } from '../src/index'
+
+describe('toHertz', () => {})
+
+describe('fromHertz', () => {})
+
+describe('fromSemitones', () => {})
+
+describe('fromScientificNotation', () => {})
