@@ -1,4 +1,4 @@
-import { nthRoot } from './helpers'
+import { nthRoot } from './math'
 
 const semitoneRatio = nthRoot(12, 2)
 const centRatio = nthRoot(1200, 2)
