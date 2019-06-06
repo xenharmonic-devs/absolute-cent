@@ -1,29 +1,13 @@
 import { memoizeWith, toString, match, tail, toLower } from 'ramda'
-
-const keys = {
-  a: 9,
-  b: 11,
-  c: 0,
-  d: 2,
-  e: 4,
-  f: 5,
-  g: 7
-}
-const modifiers = {
-  x: 2,
-  '#': 1,
-  '': 0,
-  b: -1,
-  bb: -2
-}
+import { semitonesByModifier, semitonesByKey } from './constants'
 
 const nthRoot = memoizeWith(toString, (index, radicant) => {
   return Math.pow(radicant, 1 / index)
 })
 
 const toNDecimals = memoizeWith(toString, (decimals, number) => {
-  const precisor = 10 ** decimals
-  return Math.round(number * precisor) / precisor
+  const power = 10 ** decimals
+  return Math.round(number * power) / power
 })
 
 const getBaseLog = memoizeWith(toString, (base, number) => {
@@ -39,7 +23,7 @@ const scientificNotationToSemitones = memoizeWith(toString, note => {
 
   const result = match(pattern, note)
   const [key, modifier, octave] = tail(result)
-  return (parseInt(octave) + 1) * 12 + keys[toLower(key)] + modifiers[modifier]
+  return (parseInt(octave) + 1) * 12 + semitonesByKey[toLower(key)] + semitonesByModifier[modifier]
 })
 
 export {
