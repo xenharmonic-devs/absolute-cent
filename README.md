@@ -29,3 +29,8 @@ C-1 = 0 * octave + 0 semitone
 C-1 = A4 - 69 semitone = 440 / (12th root 2) ^ 69 Hz = 8.1758… Hz
 
 0 absolute cent = C-1 = 8.1758  Hz, if A4 = 440 Hz
+
+## todos
+
+* Add unit tests (needs babel)
+* Parse tuning json files
