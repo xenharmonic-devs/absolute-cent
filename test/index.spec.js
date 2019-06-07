@@ -1,12 +1,7 @@
 /* global describe, it */
 
 import assert from 'assert'
-import {
-  toHertz,
-  fromHertz,
-  fromSemitones,
-  fromScientificNotation
-} from '../src/index'
+import { toHertz, fromHertz, fromSemitones, fromScientificNotation } from '../src/index'
 
 describe('toHertz', () => {
   it('returns the Hz value of an absolute cent', () => {

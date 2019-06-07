@@ -1,6 +1,6 @@
 import { toNDecimals, getBaseLog } from './math'
 import { scientificNotationToSemitones, calculateFrequencyOfZeroCents } from './helpers'
-import { semitoneRatio, centRatio } from './constants'
+import { centRatio } from './constants'
 
 // toHertz :: float -> int -> int -> float
 const toHertz = (absoluteCent, frequencyOfA4 = 440, precision = 7) => {
@@ -14,15 +14,14 @@ const fromHertz = (frequency, frequencyOfA4 = 440, precision = 7) => {
   return toNDecimals(precision, result)
 }
 
-const fromSemitones = (semitones, frequencyOfA4 = 440, precision = 7) => {
-  // TODO: changing the frequencyOfA4 seems to do nothing, can it be removed?
-  const hertz = calculateFrequencyOfZeroCents(frequencyOfA4) * semitoneRatio ** semitones
-  return fromHertz(hertz, frequencyOfA4, precision)
+// fromSemitones :: int -> int
+const fromSemitones = semitones => {
+  return semitones * 100
 }
 
-// fromScientificNotation :: string -> int -> int -> float
-const fromScientificNotation = (note, frequencyOfA4 = 440, precision = 7) => {
-  return fromSemitones(scientificNotationToSemitones(note), frequencyOfA4, precision)
+// fromScientificNotation :: string -> int
+const fromScientificNotation = note => {
+  return fromSemitones(scientificNotationToSemitones(note))
 }
 
 export { toHertz, fromHertz, fromSemitones, fromScientificNotation }
