@@ -1,14 +1,16 @@
-const nthRoot = (index, radicant) => {
-  return Math.pow(radicant, 1 / index)
-}
+import { curry } from 'ramda'
 
-const toNDecimals = (decimals, number) => {
+const nthRoot = curry((index, radicant) => {
+  return Math.pow(radicant, 1 / index)
+})
+
+const roundToNDecimals = curry((decimals, number) => {
   const power = 10 ** decimals
   return Math.round(number * power) / power
-}
+})
 
-const getBaseLog = (base, number) => {
+const getBaseLog = curry((base, number) => {
   return Math.log(number) / Math.log(base)
-}
+})
 
-export { nthRoot, toNDecimals, getBaseLog }
+export { nthRoot, roundToNDecimals, getBaseLog }

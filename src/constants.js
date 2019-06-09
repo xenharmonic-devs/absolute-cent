@@ -3,6 +3,7 @@ import { nthRoot } from './math'
 const semitoneRatio = nthRoot(12, 2)
 const centRatio = nthRoot(1200, 2)
 const noteIndexOfA4 = 69
+const highestNoteIndex = 127
 
 const semitonesByKey = {
   a: 9,
@@ -22,4 +23,4 @@ const semitonesByModifier = {
   bb: -2
 }
 
-export { semitoneRatio, centRatio, noteIndexOfA4, semitonesByKey, semitonesByModifier }
+export { semitoneRatio, centRatio, noteIndexOfA4, highestNoteIndex, semitonesByKey, semitonesByModifier }

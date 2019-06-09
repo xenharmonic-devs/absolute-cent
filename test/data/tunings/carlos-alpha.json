@@ -1,6 +1,9 @@
 {
   "title": "Wendy Carlos Alpha",
-  "anchor": [0, "C4"],
+  "anchor": [
+    0,
+    "C4"
+  ],
   "pitches": [
     0,
     77.995,

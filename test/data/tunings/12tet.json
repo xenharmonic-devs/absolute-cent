@@ -1,6 +1,9 @@
 {
   "title": "12 Tone Equal Temperament",
-  "anchor": [9, "A4"],
+  "anchor": [
+    9,
+    "C4"
+  ],
   "pitches": [
     0,
     100,
