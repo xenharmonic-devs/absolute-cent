@@ -1,4 +1,4 @@
-import { curry } from 'ramda'
+import { curry, reduce, min, max } from 'ramda'
 
 const nthRoot = curry((index, radicant) => {
   return Math.pow(radicant, 1 / index)
@@ -13,4 +13,7 @@ const getBaseLog = curry((base, number) => {
   return Math.log(number) / Math.log(base)
 })
 
-export { nthRoot, roundToNDecimals, getBaseLog }
+const minAll = ([x, ...xs]) => reduce(min, x, xs)
+const maxAll = ([x, ...xs]) => reduce(max, x, xs)
+
+export { nthRoot, roundToNDecimals, getBaseLog, minAll, maxAll }

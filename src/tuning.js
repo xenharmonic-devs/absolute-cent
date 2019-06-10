@@ -1,5 +1,23 @@
-import { last, map, compose, subtract, __, add, filter, gte, range, reduce, init, concat, lte } from 'ramda'
-import { roundToNDecimals } from '../src/math'
+import {
+  last,
+  map,
+  compose,
+  subtract,
+  __,
+  add,
+  filter,
+  gte,
+  range,
+  reduce,
+  init,
+  concat,
+  lte,
+  partition,
+  has,
+  lt,
+  isNil
+} from 'ramda'
+import { roundToNDecimals, minAll, maxAll } from '../src/math'
 import { highestNoteIndex } from './constants'
 import { fromScientificNotation, fromSemitones } from './index'
 
@@ -47,4 +65,25 @@ const parseTuning = (tuning, precision = 7) => {
   return map(roundToNDecimals(precision), [...lowerIncompleteScale, ...fullScales, ...upperIncompleteScale])
 }
 
-export { parseTuning }
+const retune = (absoluteCent, tuningData) => {
+  if (has(absoluteCent, tuningData)) {
+    return absoluteCent
+  }
+
+  const [lesser, greater] = partition(lt(__, absoluteCent), tuningData)
+  const prev = maxAll(lesser)
+  const next = minAll(greater)
+  if (isNil(prev)) {
+    return next
+  }
+  if (isNil(next)) {
+    return prev
+  }
+  if (absoluteCent - prev < next - absoluteCent) {
+    return prev
+  } else {
+    return next
+  }
+}
+
+export { parseTuning, retune }
