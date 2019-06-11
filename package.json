@@ -2,12 +2,12 @@
   "name": "absolute-cent",
   "version": "0.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "unit": "mocha test/**/*.spec.js --require @babel/register",
     "unit:watch": "npm run unit -- --watch --watch-extensions js",
     "lint-staged": "lint-staged",
-    "lint": "eslint \"src/**/*.js\"",
+    "lint": "eslint \"{src,lib}/**/*.js\"",
     "test": "npm-run-all lint unit"
   },
   "repository": {
@@ -54,7 +54,7 @@
     "unit"
   ],
   "lint-staged": {
-    "src/**/*.js": [
+    "{src,lib}/**/*.js": [
       "eslint --fix",
       "git add"
     ]
