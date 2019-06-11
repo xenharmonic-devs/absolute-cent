@@ -19,7 +19,7 @@ import {
 } from 'ramda'
 import { roundToNDecimals, minAll, maxAll } from '../src/math'
 import { highestNoteIndex } from './constants'
-import { fromScientificNotation, fromSemitones } from './index'
+import { fromScientificNotation, fromSemitone } from './index'
 
 const parseTuning = (tuning, precision = 7) => {
   const {
@@ -31,7 +31,7 @@ const parseTuning = (tuning, precision = 7) => {
   const scale = init(pitches)
   const scaleSize = last(pitches)
   const lowestRootCent = scaleRootCent % scaleSize
-  const highestCent = fromSemitones(highestNoteIndex)
+  const highestCent = fromSemitone(highestNoteIndex)
 
   const lowerIncompleteScale =
     lowestRootCent === 0

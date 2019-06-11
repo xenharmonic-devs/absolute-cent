@@ -8,7 +8,7 @@
 
 `fromHertz`
 
-`fromSemitones`
+`fromSemitone`
 
 `fromScientificNotation`
 

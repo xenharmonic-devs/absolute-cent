@@ -14,14 +14,14 @@ const fromHertz = (frequency, frequencyOfA4 = 440, precision = 7) => {
   return roundToNDecimals(precision, result)
 }
 
-// fromSemitones :: int -> int
-const fromSemitones = semitones => {
+// fromSemitone :: int -> int
+const fromSemitone = semitones => {
   return semitones * 100
 }
 
 // fromScientificNotation :: string -> int
 const fromScientificNotation = note => {
-  return fromSemitones(scientificNotationToSemitones(note))
+  return fromSemitone(scientificNotationToSemitones(note))
 }
 
-export { toHertz, fromHertz, fromSemitones, fromScientificNotation }
+export { toHertz, fromHertz, fromSemitone, fromScientificNotation }
