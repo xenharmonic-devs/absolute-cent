@@ -8,7 +8,8 @@
     "unit:watch": "npm run unit -- --watch --watch-extensions js",
     "lint-staged": "lint-staged",
     "lint": "eslint \"{src,lib}/**/*.js\"",
-    "test": "npm-run-all lint unit"
+    "test": "npm-run-all lint unit",
+    "example": "babel-node examples/simple.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
