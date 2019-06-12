@@ -1,7 +1,7 @@
 import { match, tail, toLower, is, test } from 'ramda'
 import { semitonesByModifier, semitonesByKey, noteIndexOfA4, semitoneRatio } from './constants'
 
-const scientificNotationToSemitones = note => {
+const scientificNotationToMidiNote = note => {
   const pattern = /^([a-g])(x|#|bb|b|)(-1|\d)$/i
 
   if (!is(String, note) || !test(pattern, note)) {
@@ -18,4 +18,4 @@ const calculateFrequencyOfZeroCents = frequencyOfA4 => {
   return frequencyOfA4 / semitoneRatio ** noteIndexOfA4
 }
 
-export { scientificNotationToSemitones, calculateFrequencyOfZeroCents }
+export { scientificNotationToMidiNote, calculateFrequencyOfZeroCents }

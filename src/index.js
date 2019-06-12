@@ -1,5 +1,5 @@
 import { roundToNDecimals, getBaseLog } from './math'
-import { scientificNotationToSemitones, calculateFrequencyOfZeroCents } from './helpers'
+import { scientificNotationToMidiNote, calculateFrequencyOfZeroCents } from './helpers'
 import { centRatio } from './constants'
 
 // toHertz :: float -> int -> int -> float
@@ -14,14 +14,14 @@ const fromHertz = (frequency, frequencyOfA4 = 440, precision = 7) => {
   return roundToNDecimals(precision, result)
 }
 
-// fromSemitone :: int -> int
-const fromSemitone = semitones => {
-  return semitones * 100
+// fromMidiNote :: int -> int
+const fromMidiNote = note => {
+  return note * 100
 }
 
 // fromScientificNotation :: string -> int
 const fromScientificNotation = note => {
-  return fromSemitone(scientificNotationToSemitones(note))
+  return fromMidiNote(scientificNotationToMidiNote(note))
 }
 
-export { toHertz, fromHertz, fromSemitone, fromScientificNotation }
+export { toHertz, fromHertz, fromMidiNote, fromScientificNotation }

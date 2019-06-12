@@ -1,7 +1,7 @@
 /* global describe, it */
 
 import assert from 'assert'
-import { toHertz, fromHertz, fromSemitone, fromScientificNotation } from '../src/index'
+import { toHertz, fromHertz, fromMidiNote, fromScientificNotation } from '../src/index'
 
 describe('toHertz', () => {
   it('returns the Hz value of an absolute cent', () => {
@@ -28,9 +28,9 @@ describe('fromHertz', () => {
   })
 })
 
-describe('fromSemitone', () => {
+describe('fromMidiNote', () => {
   it('returns the absolute cent value of a given semitone', () => {
-    assert.strictEqual(fromSemitone(69), 6900)
+    assert.strictEqual(fromMidiNote(69), 6900)
   })
 })
 
