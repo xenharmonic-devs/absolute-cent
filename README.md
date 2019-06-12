@@ -4,11 +4,11 @@
 
 `semitone` - relative value, divides an octave into 12 equal parts, 12th root of 2, https://en.wikipedia.org/wiki/Semitone
 
-`midi note` - absolute value, a set of 128 uniq semitones, starting at C-1.
+`midi note` - absolute value, a set of 128 uniq semitones, starting at `C-1`.
 
 `cent` - relative value, divides a semitone into 100 parts, 1200th root of 2, https://en.wikipedia.org/wiki/Cent_(music)
 
-`absolute cent` - absolute value, a uniq cent value assigned to every midi note, starting at C-1
+`absolute cent` - absolute value, a uniq cent value assigned to every midi note, starting at `C-1`
 
 `scientific notation` - https://en.wikipedia.org/wiki/Scientific_pitch_notation
 
@@ -37,7 +37,7 @@ an absolute cent value
 
 ### MidiNote
 
-An integer between 0 and 127 representing midi pitches. 0 is the lowest, being equal to C-1, the highest is 127.
+An integer between 0 and 127 representing midi pitches. 0 is the lowest, being equal to `C-1`, the highest is 127.
 
 ### ScientificNotation
 
