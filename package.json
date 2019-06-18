@@ -1,7 +1,7 @@
 {
   "name": "absolute-cent",
   "version": "1.0.1",
-  "description": "",
+  "description": "Retune melodies by quantizing it's notes to pitches of different tunings.",
   "main": "lib/index.js",
   "scripts": {
     "unit": "mocha test/**/*.spec.js --require @babel/register",

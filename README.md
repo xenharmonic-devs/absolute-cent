@@ -1,8 +1,14 @@
 # AbsoluteCent
 
+Retune melodies by quantizing it's notes to pitches of different tunings.
+
 ## Install
 
-_TODO: add documentation_
+Add the package to your repo by running
+
+```javascript
+npm install absolute-cent
+```
 
 ## Example
 
