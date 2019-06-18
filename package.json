@@ -1,6 +1,6 @@
 {
   "name": "absolute-cent",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Retune melodies by quantizing it's notes to pitches of different tunings.",
   "main": "lib/index.js",
   "scripts": {
