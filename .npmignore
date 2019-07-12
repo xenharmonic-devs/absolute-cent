@@ -3,3 +3,5 @@ examples/**/*
 test/**/*
 .eslintrc
 .babelrc
+src/**/*
+lib/**/*

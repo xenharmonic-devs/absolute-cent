@@ -13,7 +13,12 @@ npm install absolute-cent
 ## Example
 
 ```javascript
-import { parseTuning, retune, toHertz, fromScientificNotation } from 'absolute-cent'
+import {
+  parseTuning,
+  retune,
+  toHertz,
+  fromScientificNotation
+} from 'absolute-cent'
 
 const generateNEdo = n => {
   const tuning = []
@@ -29,18 +34,21 @@ const renderSong = notes => {
   return notes.map(note => toHertz(note, 440, 2))
 }
 
-const _19edo = {
+const tuningData = parseTuning({
   anchor: [0, 'C4'],
   pitches: generateNEdo(19)
-}
+})
 
-const scale = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'].map(fromScientificNotation)
+let song = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5']
+song = song.map(fromScientificNotation)
 
-const tuningData = parseTuning(_19edo)
-const retunedScale = scale.map(note => retune(note, tuningData))
+const retunedSong = song.map(note => retune(note, tuningData))
 
-console.log('12edo:', renderSong(scale)) //        12edo: [ 261.63, 293.66, 329.63, 349.23, 392, 440, 493.88, 523.25 ]
-console.log('19edo:', renderSong(retunedScale)) // 19edo: [ 261.63, 291.88, 325.64, 350.29, 390.81, 436.01, 486.43, 523.25 ]
+console.log('12edo:', renderSong(song))
+// 12edo: [ 261.63, 293.66, 329.63, 349.23, 392, 440, 493.88, 523.25 ]
+
+console.log('19edo:', renderSong(retunedSong))
+// 19edo: [ 261.63, 291.88, 325.64, 350.29, 390.81, 436.01, 486.43, 523.25 ]
 ```
 
 ## Glossary
@@ -57,8 +65,6 @@ console.log('19edo:', renderSong(retunedScale)) // 19edo: [ 261.63, 291.88, 325.
 
 ## API
 
-### AbsoluteCent
-
 `toHertz (float absoluteCent[, int frequencyOfA4 = 440[, int precision = 7]])` - transforms an absolute cent to a
 frequency value based on frequencyOfA4. precision is used for rounding result to a given number of decimals.
 
@@ -69,8 +75,6 @@ cent value based on frequencyOfA4. precision is used for rounding result to a gi
 
 `fromScientificNotation (ScientificNotation note)` - transforms a string containing a note represented in scientific notation to
 an absolute cent value
-
-### Tuning
 
 `parseTuning (Tuning tuning[, precision = 7])` - parses a tuning object and generates a list of absolute cent values.
 
