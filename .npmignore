@@ -5,3 +5,4 @@ test/**/*
 .babelrc
 src/**/*
 lib/**/*
+rollup.config.js
