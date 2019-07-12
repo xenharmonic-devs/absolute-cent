@@ -14,7 +14,7 @@ export default [
     output: {
       name: 'AbsoluteCent',
       file: 'dist/absolute-cent.min.js',
-      format: 'iife',
+      format: 'umd',
       sourcemap: false
     },
     plugins: [
